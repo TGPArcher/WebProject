@@ -1,0 +1,12 @@
+<div fxLayput="row" fxLayoutAlign="space-between center">
+    <div fxFlex="50">
+        <p>{{item.content}}</p>
+    </div>
+    <div fxFlex>
+        <p *ngIf="item.completed">Complete</p>
+        <p *ngIf="!item.completed">In progress</p>
+    </div>
+    <div fxFlex>
+        <p>Created at: {{item.createdAt | date:'longDate'}}</p>
+    </div>
+</div>

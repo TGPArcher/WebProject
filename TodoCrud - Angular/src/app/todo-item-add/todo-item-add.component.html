@@ -1,0 +1,16 @@
+<div mat-dialog-content>
+    <p>Add a new task:</p>
+
+    <div fxLayout="row" fxLayoutAlign="space-around center">
+        <mat-form-field fxFlex>
+            <input matInput [(ngModel)]="task" class="form-element">
+        </mat-form-field>
+
+        <mat-checkbox fxFlex [(ngModel)]="checked" class="form-element">Completed</mat-checkbox>
+    </div>
+</div>
+
+<div mat-dialog-actions fxLayout="row" fxLayoutAlign="space-around center">
+  <button mat-button (click)="onCancel()" fxFlex>Cancel</button>
+  <button mat-button (click)='onAdd()' fxFlex>Add</button>
+</div>

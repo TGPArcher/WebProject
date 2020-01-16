@@ -1,0 +1,54 @@
+<div fxLayout="row">
+    <button fxFlex mat-stroked-button color="primary" (click)="openAddItemDialog()" class="add-btn">New task</button>
+</div>
+
+<div class="container mat-elevation-z6">
+    <table mat-table [dataSource]="$items">
+        <!-- Name Column -->
+        <ng-container matColumnDef="content">
+            <th mat-header-cell *matHeaderCellDef> Name </th>
+            <td mat-cell *matCellDef="let item">
+                <ng-container *ngIf="!editing || editId !== item.id else nameInputTemplate"> {{item.content}} </ng-container>
+                <ng-template #nameInputTemplate>
+                    <mat-form-field>
+                        <input matInput [value]="item.content" minlength="1" #nameInput>
+                    </mat-form-field>
+                </ng-template>
+            </td>
+        </ng-container>
+        
+        <!-- Created Column -->
+        <ng-container matColumnDef="created">
+            <th mat-header-cell *matHeaderCellDef> Created </th>
+            <td mat-cell *matCellDef="let item"> {{item.createdAt | date:'longDate'}} </td>
+        </ng-container>
+    
+        <!-- Completed Column -->
+        <ng-container matColumnDef="completed">
+            <th mat-header-cell *matHeaderCellDef> Completed </th>
+            <td mat-cell *matCellDef="let item">
+                <mat-checkbox (change)="checkActionItem(item, $event)" [(ngModel)]="item.completed"></mat-checkbox>
+            </td>
+        </ng-container>
+
+        <!-- Actions Column -->
+        <ng-container matColumnDef="actions">
+            <th mat-header-cell *matHeaderCellDef> Action </th>
+            <td mat-cell *matCellDef="let item"> 
+                <div>
+                    <ng-container *ngIf="!editing || editId !== item.id else editActions">
+                        <button mat-raised-button (click)="editActionItem(item)">Edit</button>
+                        <button mat-raised-button color="warn" (click)="triggerDeleteActionItem(item)">Delete</button>
+                    </ng-container>
+                    <ng-template #editActions>
+                        <button mat-raised-button color="primary" (click)="saveEditActionItem()">Save</button>
+                        <button mat-raised-button (click)="cancelEditActionItem()">Cancel</button>
+                    </ng-template>
+                </div>
+            </td>
+        </ng-container>
+    
+        <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+</div>

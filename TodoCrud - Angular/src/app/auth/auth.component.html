@@ -1,0 +1,11 @@
+<form [formGroup]="form" (ngSubmit)="submitAuthForm()" [fxFlexOffset]="25" fxFlex="50" fxLayout="column" fxLayoutAlign="space-around stretch">
+    <mat-form-field>
+        <input matInput placeholder="Username" formControlName="username">
+    </mat-form-field>
+
+    <mat-form-field>
+        <input matInput type="password" placeholder="Password" formControlName="password">
+    </mat-form-field>
+
+    <button mat-stroked-button type="submit" color="primary">{{ register ? "Register" : "Login" }}</button>
+</form>

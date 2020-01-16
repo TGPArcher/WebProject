@@ -1,0 +1,13 @@
+<mat-toolbar color="primary">
+    <mat-toolbar-row>
+        <span class="nav-element">To do app</span>
+        <span class="example-fill-remaining-space"></span>
+
+        <span *ngIf="username !== undefined" class="nav-element">{{username}}</span>
+        <button *ngIf="username !== undefined" mat-stroked-button class="nav-element" (click)="logout()">Log out</button>
+        <button *ngIf="username === undefined" mat-stroked-button routerLink="/login" routerLinkActive="disabled">Login</button>
+        <button *ngIf="username === undefined" mat-stroked-button routerLink="/register" routerLinkActive="disabled">Register</button>
+    </mat-toolbar-row>
+</mat-toolbar>
+
+<router-outlet></router-outlet>

@@ -1,0 +1,11 @@
+C:\Users\TGP\Source\Repos\CrudToDo\MySqlPersistance\bin\Debug\netcoreapp3.0\MySqlPersistance.deps.json
+C:\Users\TGP\Source\Repos\CrudToDo\MySqlPersistance\bin\Debug\netcoreapp3.0\MySqlPersistance.dll
+C:\Users\TGP\Source\Repos\CrudToDo\MySqlPersistance\obj\Debug\netcoreapp3.0\MySqlPersistance.csprojAssemblyReference.cache
+C:\Users\TGP\Source\Repos\CrudToDo\MySqlPersistance\obj\Debug\netcoreapp3.0\MySqlPersistance.AssemblyInfoInputs.cache
+C:\Users\TGP\Source\Repos\CrudToDo\MySqlPersistance\obj\Debug\netcoreapp3.0\MySqlPersistance.AssemblyInfo.cs
+C:\Users\TGP\Source\Repos\CrudToDo\MySqlPersistance\bin\Debug\netcoreapp3.0\MySqlPersistance.pdb
+C:\Users\TGP\Source\Repos\CrudToDo\MySqlPersistance\obj\Debug\netcoreapp3.0\MySqlPersistance.dll
+C:\Users\TGP\Source\Repos\CrudToDo\MySqlPersistance\obj\Debug\netcoreapp3.0\MySqlPersistance.pdb
+C:\Users\TGP\Source\Repos\CrudToDo\MySqlPersistance\bin\Debug\netcoreapp3.0\Domain.dll
+C:\Users\TGP\Source\Repos\CrudToDo\MySqlPersistance\bin\Debug\netcoreapp3.0\Domain.pdb
+C:\Users\TGP\Source\Repos\CrudToDo\MySqlPersistance\obj\Debug\netcoreapp3.0\MySqlPersistance.csproj.CopyComplete
